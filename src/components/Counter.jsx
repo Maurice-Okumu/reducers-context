@@ -1,8 +1,8 @@
-import React, { useReducer } from 'react';
-import { counterReducer, initialState } from '../reducers';
+import  { useContext } from 'react';
+import { CounterContext } from '../context';
 
 function Counter() {
-  const [state, dispatch] = useReducer(counterReducer, initialState);
+  const { state, dispatch } = useContext(CounterContext);
 
   return (
     <div>
